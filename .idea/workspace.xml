@@ -96,15 +96,15 @@
       <updated>1572250253410</updated>
       <workItem from="1572250256610" duration="332000" />
       <workItem from="1572256183801" duration="811000" />
-      <workItem from="1572259013053" duration="1592000" />
+      <workItem from="1572259013053" duration="1870000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2735000" />
+    <option name="totallyTimeSpent" value="3013000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="932" y="63" width="1474" height="979" extended-state="0" />
+    <frame x="868" y="16" width="1474" height="979" extended-state="0" />
     <layout>
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
