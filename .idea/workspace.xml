@@ -27,8 +27,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="268" />
-    <option name="y" value="12" />
+    <option name="x" value="868" />
+    <option name="y" value="16" />
     <option name="width" value="1474" />
     <option name="height" value="979" />
   </component>
@@ -45,11 +45,6 @@
             <path>
               <item name="gmall-0615" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmall-0615" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmall-0615" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall-0615" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-admin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -101,26 +96,26 @@
       <updated>1572250253410</updated>
       <workItem from="1572250256610" duration="332000" />
       <workItem from="1572256183801" duration="811000" />
-      <workItem from="1572259013053" duration="1081000" />
+      <workItem from="1572259013053" duration="1592000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2224000" />
+    <option name="totallyTimeSpent" value="2735000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="268" y="12" width="1474" height="979" extended-state="0" />
+    <frame x="932" y="63" width="1474" height="979" extended-state="0" />
     <layout>
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.2609618" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.2609618" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.32924107" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Run" order="5" />
