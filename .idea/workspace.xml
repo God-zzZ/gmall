@@ -54,6 +54,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
@@ -96,12 +97,12 @@
       <updated>1572250253410</updated>
       <workItem from="1572250256610" duration="332000" />
       <workItem from="1572256183801" duration="811000" />
-      <workItem from="1572259013053" duration="1870000" />
+      <workItem from="1572259013053" duration="2329000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3013000" />
+    <option name="totallyTimeSpent" value="3472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="868" y="16" width="1474" height="979" extended-state="0" />
@@ -111,11 +112,11 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.2609618" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.2609618" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.32924107" />
+      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.32924107" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Run" order="5" />
