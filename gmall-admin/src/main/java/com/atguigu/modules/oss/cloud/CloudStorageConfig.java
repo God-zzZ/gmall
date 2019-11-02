@@ -91,4 +91,7 @@ public class CloudStorageConfig implements Serializable {
     private String qcloudRegion;
 
 
+    public int getType() {
+        return 0;
+    }
 }

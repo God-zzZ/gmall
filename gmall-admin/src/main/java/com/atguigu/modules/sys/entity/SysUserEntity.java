@@ -87,4 +87,7 @@ public class SysUserEntity implements Serializable {
 	 */
 	private Date createTime;
 
+    public String getUsername() {
+		return null;
+	}
 }

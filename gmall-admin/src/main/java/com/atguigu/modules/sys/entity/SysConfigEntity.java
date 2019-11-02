@@ -30,4 +30,13 @@ public class SysConfigEntity {
 	private String paramValue;
 	private String remark;
 
+    public String getParamKey() {
+
+		return null;
+	}
+
+	public String getParamValue() {
+
+		return null;
+	}
 }

@@ -33,4 +33,9 @@ public class SysOssEntity implements Serializable {
 	//创建时间
 	private Date createDate;
 
+    public void setUrl(String url) {
+    }
+
+	public void setCreateDate(Date date) {
+	}
 }

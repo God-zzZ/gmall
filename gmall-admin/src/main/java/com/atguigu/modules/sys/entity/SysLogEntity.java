@@ -42,4 +42,24 @@ public class SysLogEntity implements Serializable {
 	//创建时间
 	private Date createDate;
 
+    public void setOperation(String value) {
+    }
+
+	public void setMethod(String s) {
+	}
+
+	public void setParams(String params) {
+	}
+
+	public void setIp(String ipAddr) {
+	}
+
+	public void setUsername(String username) {
+	}
+
+	public void setTime(long time) {
+	}
+
+	public void setCreateDate(Date date) {
+	}
 }
