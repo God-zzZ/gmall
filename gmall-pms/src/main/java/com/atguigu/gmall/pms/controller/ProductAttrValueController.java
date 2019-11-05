@@ -1,22 +1,24 @@
 package com.atguigu.gmall.pms.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
-
 import com.atguigu.core.bean.PageVo;
 import com.atguigu.core.bean.QueryCondition;
 import com.atguigu.core.bean.Resp;
+import com.atguigu.gmall.pms.entity.ProductAttrValueEntity;
+import com.atguigu.gmall.pms.service.ProductAttrValueService;
+import com.atguigu.gmall.pms.vo.SpuAttributeValueVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.atguigu.gmall.pms.entity.ProductAttrValueEntity;
-import com.atguigu.gmall.pms.service.ProductAttrValueService;
-
-
+import java.util.Arrays;
+import java.util.List;
 
 
 /**
@@ -32,6 +34,15 @@ import com.atguigu.gmall.pms.service.ProductAttrValueService;
 public class ProductAttrValueController {
     @Autowired
     private ProductAttrValueService productAttrValueService;
+
+    @GetMapping("{spuId}")
+    public Resp<List<SpuAttributeValueVO>> querySearchAttrValue(@PathVariable("spuId")Long spuId)
+    {
+        List<SpuAttributeValueVO> spuAttrValueVOS = this.productAttrValueService.querySearchAttrValue(spuId);
+
+        return Resp.ok(spuAttrValueVOS);
+    }
+
 
     /**
      * 列表

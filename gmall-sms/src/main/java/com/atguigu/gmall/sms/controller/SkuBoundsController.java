@@ -1,20 +1,23 @@
 package com.atguigu.gmall.sms.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
-
 import com.atguigu.core.bean.PageVo;
 import com.atguigu.core.bean.QueryCondition;
 import com.atguigu.core.bean.Resp;
+import com.atguigu.gmall.sms.entity.SkuBoundsEntity;
+import com.atguigu.gmall.sms.service.SkuBoundsService;
+import com.atguigu.gmall.sms.vo.SaleVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.atguigu.gmall.sms.entity.SkuBoundsEntity;
-import com.atguigu.gmall.sms.service.SkuBoundsService;
+import java.util.Arrays;
 
 
 
@@ -32,6 +35,14 @@ import com.atguigu.gmall.sms.service.SkuBoundsService;
 public class SkuBoundsController {
     @Autowired
     private SkuBoundsService skuBoundsService;
+
+
+    @PostMapping("sale")
+    public Resp<Object> saveSale(@RequestBody SaleVO saleVO)
+    {
+        this.skuBoundsService.saveSale(saleVO);
+        return Resp.ok(null);
+    }
 
     /**
      * 列表

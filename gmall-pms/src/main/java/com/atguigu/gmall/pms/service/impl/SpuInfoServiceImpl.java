@@ -14,10 +14,12 @@ import com.atguigu.gmall.pms.entity.SkuInfoEntity;
 import com.atguigu.gmall.pms.entity.SkuSaleAttrValueEntity;
 import com.atguigu.gmall.pms.entity.SpuInfoDescEntity;
 import com.atguigu.gmall.pms.entity.SpuInfoEntity;
+import com.atguigu.gmall.pms.feign.GmallSmsClient;
 import com.atguigu.gmall.pms.service.SpuInfoService;
 import com.atguigu.gmall.pms.vo.ProductAttrValueVO;
 import com.atguigu.gmall.pms.vo.SkuInfoVO;
 import com.atguigu.gmall.pms.vo.SpuInfoVO;
+import com.atguigu.gmall.sms.vo.SaleVO;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -49,6 +51,9 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
 
     @Autowired
     private SkuSaleAttrValueDao saleAttrValueDao;
+
+    @Autowired
+    private GmallSmsClient smsClient;
 
     @Override
     public PageVo queryPage(QueryCondition params) {
@@ -181,14 +186,29 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
 
 
             // 3.新增营销相关的3张表 （需要skuId）
-            // 3.1 新增积分：skuBounds
-
-            // 3.2 新增打折信息：skuLadder
-
-            // 3.3 新增满减信息：skuReduction
-
+            SaleVO saleVO = new SaleVO();
+            BeanUtils.copyProperties(skuInfoVO, saleVO);
+            saleVO.setSkuId(skuId);
+            this.smsClient.saveSale(saleVO);
         });
     }
+
+   /* private void saveBaseAttr(SpuInfoVO spuInfoVO, Long spuId) {
+        List<ProductAttrValueVO> baseAttrs = spuInfoVO.getBaseAttrs();
+        baseAttrs.forEach(baseAttr -> {
+            baseAttr.setSpuId(spuId);
+            baseAttr.setAttrSort(0);
+            baseAttr.setQuickShow(1);
+            this.productAttrValueDao.insert(baseAttr);
+        });
+    }
+
+    private Long saveSpuInfo(SpuInfoVO spuInfoVO) {
+        spuInfoVO.setCreateTime(new Date());
+        spuInfoVO.setUodateTime(spuInfoVO.getCreateTime());
+        this.save(spuInfoVO);
+        return spuInfoVO.getId();
+    }*/
 }
 
 

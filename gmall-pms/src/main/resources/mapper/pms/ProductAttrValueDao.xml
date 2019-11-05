@@ -15,4 +15,42 @@
     </resultMap>
 
 
+    <select id="querySearchAttrValue" resultMap="productAttrValueMap">
+        select * from
+            pms_product_attr_value a
+        inner join
+            pms_attr b
+        on
+            a.attr_id = b.attr_id
+        where
+            a.spu_id = #{spuId}
+        and
+            b.search_type = 1
+    </select>
+
+
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
